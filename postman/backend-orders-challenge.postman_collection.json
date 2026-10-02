@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "7821acd5-a2bf-46a2-8d34-b57d901e3a01",
+		"name": "backend-orders-challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27471586"
+	},
+	"item": [
+		{
+			"name": "createOrder /orders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer_id\": 123,\n  \"order_items\": [\n    { \"product_id\": 45, \"quantity\": 2},\n    { \"product_id\": 2, \"quantity\": 1}\n  ]\n}  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrdersDetails /orders/:order_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders/:order_id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":order_id"
+					],
+					"variable": [
+						{
+							"key": "order_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payOrder /orders/:order_id/pay",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders/:order_id/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":order_id",
+						"pay"
+					],
+					"variable": [
+						{
+							"key": "order_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payOrder  (not PENDING) /orders/:order_id/pay",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/orders/:order_id/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						":order_id",
+						"pay"
+					],
+					"variable": [
+						{
+							"key": "order_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

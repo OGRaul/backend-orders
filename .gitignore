@@ -1,0 +1,38 @@
+# Maven / Java build output
+**/target/
+**/build/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven wrapper download
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE metadata
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+**/application-local.properties
+**/application-local.yml
+**/application-local.yaml
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Operating system files
+.DS_Store
+Thumbs.db
